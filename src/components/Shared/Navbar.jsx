@@ -1,8 +1,15 @@
+"use client"
+
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoCartOutline, IoSearch } from "react-icons/io5";
 
 export default function Navbar() {
+
+  const session = useSession()
+  console.log(session)
+
   const navlinks = [
     {
       title: "Home",
